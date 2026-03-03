@@ -4,149 +4,362 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diane Ruthes | Data & Automation</title>
-
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #0f172a;
-    color: #e2e8f0;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-header {
-    padding: 80px 20px;
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0f1e;
+    --surface: #111827;
+    --surface2: #1a2438;
+    --accent: #38bdf8;
+    --accent2: #34d399;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --border: rgba(56,189,248,0.12);
+  }
+
+  body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  header {
+    position: relative;
+    padding: 100px 20px 80px;
     text-align: center;
-    background: linear-gradient(135deg, #1e293b, #0f172a);
-}
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(56,189,248,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .avatar {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px; font-weight: 700; color: var(--bg);
+    margin: 0 auto 20px;
+    box-shadow: 0 0 0 4px rgba(56,189,248,0.2);
+  }
+  header h1 { font-size: 44px; font-weight: 700; letter-spacing: -1px; margin-bottom: 10px; }
+  header h1 span { color: var(--accent); }
+  .tagline { font-size: 17px; color: var(--muted); margin-bottom: 30px; }
+  .badge-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 32px; }
+  .badge {
+    background: rgba(56,189,248,0.1); border: 1px solid var(--border);
+    color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500;
+  }
+  .btn {
+    display: inline-block; padding: 13px 28px;
+    background: var(--accent); color: var(--bg);
+    border-radius: 8px; font-weight: 700; font-size: 15px;
+    text-decoration: none; transition: all 0.2s;
+    box-shadow: 0 4px 20px rgba(56,189,248,0.3);
+  }
+  .btn:hover { background: #7dd3fc; transform: translateY(-2px); }
 
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
+  section { padding: 70px 20px; max-width: 1000px; margin: 0 auto; }
+  h2 { font-size: 26px; font-weight: 700; color: var(--accent); margin-bottom: 30px; }
 
-header p {
-    font-size: 20px;
-    color: #38bdf8;
-}
+  .about-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    font-size: 16px; color: var(--muted); line-height: 1.8;
+  }
+  .about-box strong { color: var(--text); }
 
-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
+  .featured-label {
+    display: inline-block; padding: 4px 12px;
+    background: linear-gradient(90deg, rgba(52,211,153,0.2), rgba(56,189,248,0.2));
+    border: 1px solid rgba(52,211,153,0.4);
+    border-radius: 20px; font-size: 12px; font-weight: 600;
+    color: var(--accent2); letter-spacing: 0.5px; text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .featured-card {
+    background: var(--surface);
+    border: 1px solid rgba(52,211,153,0.25);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    transition: all 0.3s;
+  }
+  .featured-card:hover { border-color: rgba(52,211,153,0.5); transform: translateY(-3px); }
 
-h2 {
-    color: #38bdf8;
-    margin-bottom: 20px;
-}
+  .video-wrapper {
+    position: relative;
+    width: 100%; background: #070d1a;
+    border-bottom: 1px solid var(--border);
+  }
+  .video-wrapper video {
+    width: 100%; display: block;
+    max-height: 420px; object-fit: cover;
+  }
+  .video-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, var(--surface) 100%);
+    pointer-events: none;
+  }
 
-.card {
-    background-color: #1e293b;
-    padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    transition: 0.3s;
-}
+  .featured-body { padding: 28px 32px 32px; }
+  .featured-body h3 { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+  .featured-body .desc { color: var(--muted); margin-bottom: 24px; font-size: 15px; }
 
-.card:hover {
-    transform: translateY(-5px);
-}
-
-ul {
-    padding-left: 20px;
-}
-
-a {
-    color: #38bdf8;
-    text-decoration: none;
-}
-
-.button {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #38bdf8;
-    color: #0f172a;
-    border-radius: 8px;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-.button:hover {
-    background-color: #0ea5e9;
-}
-
-footer {
+  .metrics-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 14px; margin-bottom: 24px;
+  }
+  .metric {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px;
     text-align: center;
-    padding: 30px;
-    background-color: #1e293b;
-}
+  }
+  .metric-icon { font-size: 22px; margin-bottom: 6px; }
+  .metric-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .metric-val { font-size: 13px; font-weight: 600; color: var(--accent); margin-top: 3px; }
+
+  .tools-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+  .tool-tag {
+    background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.2);
+    color: var(--accent); padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 500;
+  }
+  .diff-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .diff-item {
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--muted);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .diff-item::before { content: '✦'; color: var(--accent2); font-size: 10px; flex-shrink: 0; }
+
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 26px;
+    transition: all 0.25s;
+  }
+  .card:hover { transform: translateY(-4px); border-color: rgba(56,189,248,0.3); }
+  .card-icon { font-size: 28px; margin-bottom: 14px; }
+  .card h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
+  .card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  .stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .stack-item {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px;
+    display: flex; align-items: center; gap: 14px;
+    transition: all 0.25s;
+  }
+  .stack-item:hover { border-color: rgba(56,189,248,0.3); background: var(--surface2); }
+  .stack-icon { font-size: 26px; flex-shrink: 0; }
+  .stack-info .stack-name { font-weight: 600; font-size: 15px; }
+  .stack-info .stack-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  .contact-box {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 16px; padding: 36px; text-align: center;
+  }
+  .contact-box p { color: var(--muted); margin-bottom: 24px; font-size: 16px; }
+  .contact-links { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+  .contact-link {
+    display: flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: 10px;
+    font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s;
+  }
+  .contact-link.linkedin { background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.3); color: var(--accent); }
+  .contact-link.email { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3); color: var(--accent2); }
+  .contact-link:hover { transform: translateY(-2px); }
+
+  footer {
+    text-align: center; padding: 30px;
+    background: var(--surface); color: var(--muted); font-size: 14px;
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 30px; }
+    .diff-list { grid-template-columns: 1fr; }
+    .featured-body { padding: 20px; }
+  }
 </style>
 </head>
-
 <body>
 
 <header>
-    <h1>Diane Ruthes</h1>
-    <p>Data Analyst | Automation Specialist | Business Intelligence</p>
-    <a href="https://www.linkedin.com/in/dianejanaineruthes/" class="button" target="_blank">Meu LinkedIn</a>
+  <div class="avatar">DR</div>
+  <h1>Diane <span>Ruthes</span></h1>
+  <p class="tagline">Data Analyst · Automation Specialist · Business Intelligence</p>
+  <div class="badge-row">
+    <span class="badge">🌿 Dados Florestais</span>
+    <span class="badge">📊 Power BI</span>
+    <span class="badge">🐍 Python</span>
+    <span class="badge">🗺️ ArcGIS</span>
+    <span class="badge">⚙️ Automação</span>
+  </div>
+  <a href="https://www.linkedin.com/in/dianejanaineruthes/" class="btn" target="_blank">🔗 Meu LinkedIn</a>
 </header>
 
 <section>
-    <h2>🚀 Sobre mim</h2>
-    <p>
-        Profissional de dados especializada em automação de processos, tratamento e modelagem de dados,
-        com forte atuação em Python, Power BI e integração de sistemas.
-        Experiência no desenvolvimento de soluções que reduzem tempo operacional e aumentam eficiência analítica.
-    </p>
+  <h2>🚀 Sobre mim</h2>
+  <div class="about-box">
+    Profissional de dados especializada em <strong>automação de processos</strong>, tratamento e modelagem de dados,
+    com forte atuação em <strong>Python, Power BI</strong> e integração de sistemas.
+    Experiência no desenvolvimento de soluções que <strong>reduzem tempo operacional</strong> e aumentam eficiência analítica,
+    com background em dados ambientais e florestais.
+  </div>
 </section>
 
 <section>
-    <h2>📊 Projetos em Destaque</h2>
+  <h2>📊 Projetos em Destaque</h2>
 
-    <div class="card">
-        <h3>Automação de Processamento de Dados</h3>
-        <p>Desenvolvimento de scripts Python para tratamento automático de planilhas, integração com ArcGIS e geração de relatórios estruturados.</p>
+  <div class="featured-label">⭐ Projeto Principal</div>
+  <div class="featured-card">
+    <div class="video-wrapper">
+      <!-- Suba seu vídeo na pasta assets/ do repositório -->
+      <video autoplay loop muted playsinline src="assets/dashboard-inventario-florestal.mp4">
+        Seu navegador não suporta vídeo HTML5.
+      </video>
+      <div class="video-overlay"></div>
     </div>
-
-    <div class="card">
-        <h3>Dashboard Estratégico Power BI</h3>
-        <p>Modelagem de dados, criação de medidas DAX avançadas e desenvolvimento de indicadores para tomada de decisão.</p>
+    <div class="featured-body">
+      <h3>🌳 Dashboard de Inventário Florestal</h3>
+      <p class="desc">
+        Dashboard estratégico em Power BI para análise de dados de inventário florestal,
+        com acompanhamento de volume, idade, área e indicadores operacionais em tempo real.
+      </p>
+      <div class="metrics-grid">
+        <div class="metric">
+          <div class="metric-icon">📐</div>
+          <div class="metric-label">Indicador</div>
+          <div class="metric-val">Vol / Hectare</div>
+        </div>
+        <div class="metric">
+          <div class="metric-icon">🌲</div>
+          <div class="metric-label">Análise</div>
+          <div class="metric-val">Área por Ciclo</div>
+        </div>
+        <div class="metric">
+          <div class="metric-icon">📅</div>
+          <div class="metric-label">Métrica</div>
+          <div class="metric-val">Idade Média</div>
+        </div>
+        <div class="metric">
+          <div class="metric-icon">📍</div>
+          <div class="metric-label">Escopo</div>
+          <div class="metric-val">Por Regional</div>
+        </div>
+        <div class="metric">
+          <div class="metric-icon">📊</div>
+          <div class="metric-label">Índice</div>
+          <div class="metric-val">% IFC</div>
+        </div>
+      </div>
+      <div class="tools-row">
+        <span class="tool-tag">Power BI</span>
+        <span class="tool-tag">DAX Avançado</span>
+        <span class="tool-tag">Modelagem de Dados</span>
+        <span class="tool-tag">Base Cadastral</span>
+        <span class="tool-tag">Performance Otimizada</span>
+      </div>
+      <div class="diff-list">
+        <div class="diff-item">Medidas DAX avançadas</div>
+        <div class="diff-item">Filtros dinâmicos por ano de inventário</div>
+        <div class="diff-item">Integração com base cadastral</div>
+        <div class="diff-item">Otimização de performance do modelo</div>
+        <div class="diff-item">Distribuição por regional</div>
+        <div class="diff-item">Tratamento e padronização de base</div>
+      </div>
     </div>
+  </div>
 
+  <div class="cards-grid">
     <div class="card">
-        <h3>Gestão e Organização de Dados Ambientais</h3>
-        <p>Processamento e estruturação de dados florestais e ambientais para análises estratégicas.</p>
+      <div class="card-icon">🤖</div>
+      <h3>Automação de Processamento de Dados</h3>
+      <p>Scripts Python para tratamento automático de planilhas, integração com ArcGIS e geração de relatórios estruturados.</p>
     </div>
-
+    <div class="card">
+      <div class="card-icon">🌿</div>
+      <h3>Gestão de Dados Ambientais</h3>
+      <p>Processamento e estruturação de dados florestais e ambientais para análises estratégicas de campo.</p>
+    </div>
+  </div>
 </section>
 
 <section>
-    <h2>🛠️ Stack Tecnológica</h2>
-    <ul>
-        <li>Python (Pandas, Automação, Tratamento de Dados)</li>
-        <li>Power BI (DAX, Modelagem de Dados)</li>
-        <li>SQL</li>
-        <li>ArcGIS</li>
-        <li>Git & GitHub</li>
-    </ul>
+  <h2>🛠️ Stack Tecnológica</h2>
+  <div class="stack-grid">
+    <div class="stack-item">
+      <div class="stack-icon">🐍</div>
+      <div class="stack-info">
+        <div class="stack-name">Python</div>
+        <div class="stack-desc">Pandas · Automação · ETL</div>
+      </div>
+    </div>
+    <div class="stack-item">
+      <div class="stack-icon">📊</div>
+      <div class="stack-info">
+        <div class="stack-name">Power BI</div>
+        <div class="stack-desc">DAX · Modelagem · Relatórios</div>
+      </div>
+    </div>
+    <div class="stack-item">
+      <div class="stack-icon">🗄️</div>
+      <div class="stack-info">
+        <div class="stack-name">SQL</div>
+        <div class="stack-desc">Consultas · Banco de dados</div>
+      </div>
+    </div>
+    <div class="stack-item">
+      <div class="stack-icon">🗺️</div>
+      <div class="stack-info">
+        <div class="stack-name">ArcGIS</div>
+        <div class="stack-desc">Dados geoespaciais</div>
+      </div>
+    </div>
+    <div class="stack-item">
+      <div class="stack-icon">🐙</div>
+      <div class="stack-info">
+        <div class="stack-name">Git & GitHub</div>
+        <div class="stack-desc">Versionamento · Portfolio</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section>
-    <h2>📈 Diferencial Profissional</h2>
-    <p>
-        Capacidade de estruturar projetos do zero, desenvolver soluções automatizadas e transformar dados brutos
-        em inteligência estratégica.
-    </p>
-</section>
-
-<section>
-    <h2>📩 Contato</h2>
-    <p>Email: dianeruthes.florestal@email.com</p>
+  <h2>📩 Contato</h2>
+  <div class="contact-box">
+    <p>Aberta a novas oportunidades e colaborações em projetos de dados, automação e BI.</p>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/dianejanaineruthes/" class="contact-link linkedin" target="_blank">
+        💼 LinkedIn
+      </a>
+      <a href="mailto:dianeruthes.florestal@email.com" class="contact-link email">
+        ✉️ dianeruthes.florestal@email.com
+      </a>
+    </div>
+  </div>
 </section>
 
 <footer>
-    © 2026 Diane Ruthes | Data Portfolio
+  © 2026 Diane Ruthes · Data & Automation Portfolio
 </footer>
 
 </body>
 </html>
+```
+
+
+
+    └── dashboard-inventario-florestal.mp4  ← suba seu vídeo aqui
