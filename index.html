@@ -1,143 +1,181 @@
+
+
+Iniciar teste gratuito
+
+Compartilhar
+pasted_content.txt
+Texto · 19.62 KB
+corrija meu codigo html para inserir no github
+Lite
+Com certeza! Vou analisar o seu código HTML e fazer as correções necessárias para que ele funcione perfeitamente no GitHub.
+Identifiquei erro na linha 292: há uma aspa dupla extra no final do link, que pode causar problema na validação do HTML. Próximo passo: corrigir essa linha.
+
+Identifiquei e corrigi o erro de aspas extras na linha 292. O próximo passo é validar o HTML corrigido para garantir que tudo esteja adequado.
+
+Lite
+Analisei e corrigi o seu código HTML. O arquivo agora está pronto para ser utilizado no seu repositório do GitHub.
+Principais Correções Realizadas:
+Correção de Tags: Finalizei uma tag div que estava incompleta no meio do código.
+Estrutura de Cards: Corrigi um erro de aninhamento na seção de "Scripts & Automações" onde um card estava dentro de outro, o que quebrava o layout.
+Links e Atributos: Removi aspas duplas extras em diversos links e padronizei os endereços para o seu perfil do GitHub.
+Refinamento de Texto: Ajustei termos como "vrs" para "vs" e corrigi a capitalização para manter o profissionalismo.
+Como publicar no GitHub:
+Crie um novo repositório no GitHub (ex: meu-portfolio).
+Faça o upload deste arquivo index.html.
+Vá em Settings > Pages.
+Em Build and deployment, selecione a branch main e a pasta / (root).
+Clique em Save e seu site estará no ar em alguns minutos!
+Nota: Lembre-se de criar uma pasta chamada assets no seu repositório e colocar a imagem PBI_Inventario.jpg dentro dela para que o banner do projeto principal apareça corretamente.
+index.html
+Código · 19.74 KB
+Ver todos os arquivos nesta tarefa
+Tarefa concluída
+Como foi este resultado?
+Sugestões de acompanhamento
+
+
+
+index.html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diane Ruthes | Data & Automation</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diane Ruthes | Data & Automation</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  :root {
-    --bg: #0a0f1e;
-    --surface: #111827;
-    --surface2: #1a2438;
-    --accent: #38bdf8;
-    --accent2: #34d399;
-    --text: #e2e8f0;
-    --muted: #94a3b8;
-    --border: rgba(56,189,248,0.12);
-  }
+    :root {
+      --bg: #0a0f1e;
+      --surface: #111827;
+      --surface2: #1a2438;
+      --accent: #38bdf8;
+      --accent2: #34d399;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: rgba(56,189,248,0.12);
+    }
 
-  body { font-family: 'Inter', 'Segoe UI', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+    body { font-family: 'Inter', 'Segoe UI', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-  header { position: relative; padding: 100px 20px 80px; text-align: center; overflow: hidden; }
-  header::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(56,189,248,0.12) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .avatar {
-    width: 80px; height: 80px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    display: flex; align-items: center; justify-content: center;
-    font-size: 32px; font-weight: 700; color: var(--bg);
-    margin: 0 auto 20px; box-shadow: 0 0 0 4px rgba(56,189,248,0.2);
-  }
-  header h1 { font-size: 44px; font-weight: 700; letter-spacing: -1px; margin-bottom: 10px; }
-  header h1 span { color: var(--accent); }
-  .tagline { font-size: 17px; color: var(--muted); margin-bottom: 30px; }
-  .badge-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 32px; }
-  .badge { background: rgba(56,189,248,0.1); border: 1px solid var(--border); color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; }
-  .btn {
-    display: inline-block; padding: 13px 28px; background: var(--accent); color: var(--bg);
-    border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none; transition: all 0.2s;
-    box-shadow: 0 4px 20px rgba(56,189,248,0.3);
-  }
-  .btn:hover { background: #7dd3fc; transform: translateY(-2px); }
+    header { position: relative; padding: 100px 20px 80px; text-align: center; overflow: hidden; }
+    header::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(56,189,248,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .avatar {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px; font-weight: 700; color: var(--bg);
+      margin: 0 auto 20px; box-shadow: 0 0 0 4px rgba(56,189,248,0.2);
+    }
+    header h1 { font-size: 44px; font-weight: 700; letter-spacing: -1px; margin-bottom: 10px; }
+    header h1 span { color: var(--accent); }
+    .tagline { font-size: 17px; color: var(--muted); margin-bottom: 30px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 32px; }
+    .badge { background: rgba(56,189,248,0.1); border: 1px solid var(--border); color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; }
+    .btn {
+      display: inline-block; padding: 13px 28px; background: var(--accent); color: var(--bg);
+      border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none; transition: all 0.2s;
+      box-shadow: 0 4px 20px rgba(56,189,248,0.3);
+    }
+    .btn:hover { background: #7dd3fc; transform: translateY(-2px); }
 
-  section { padding: 70px 20px; max-width: 1000px; margin: 0 auto; }
-  h2 { font-size: 26px; font-weight: 700; color: var(--accent); margin-bottom: 30px; }
+    section { padding: 70px 20px; max-width: 1000px; margin: 0 auto; }
+    h2 { font-size: 26px; font-weight: 700; color: var(--accent); margin-bottom: 30px; }
 
-  .about-box { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; font-size: 16px; color: var(--muted); line-height: 1.8; }
-  .about-box strong { color: var(--text); }
+    .about-box { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px; font-size: 16px; color: var(--muted); line-height: 1.8; }
+    .about-box strong { color: var(--text); }
 
-  .featured-label {
-    display: inline-block; padding: 4px 12px;
-    background: linear-gradient(90deg, rgba(52,211,153,0.2), rgba(56,189,248,0.2));
-    border: 1px solid rgba(52,211,153,0.4); border-radius: 20px;
-    font-size: 12px; font-weight: 600; color: var(--accent2);
-    letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 16px;
-  }
-  .featured-card {
-    background: var(--surface); border: 1px solid rgba(52,211,153,0.25);
-    border-radius: 16px; overflow: hidden; margin-bottom: 24px; transition: all 0.3s;
-  }
-  .featured-card:hover { border-color: rgba(52,211,153,0.5); transform: translateY(-3px); }
+    .featured-label {
+      display: inline-block; padding: 4px 12px;
+      background: linear-gradient(90deg, rgba(52,211,153,0.2), rgba(56,189,248,0.2));
+      border: 1px solid rgba(52,211,153,0.4); border-radius: 20px;
+      font-size: 12px; font-weight: 600; color: var(--accent2);
+      letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .featured-card {
+      background: var(--surface); border: 1px solid rgba(52,211,153,0.25);
+      border-radius: 16px; overflow: hidden; margin-bottom: 24px; transition: all 0.3s;
+    }
+    .featured-card:hover { border-color: rgba(52,211,153,0.5); transform: translateY(-3px); }
 
-  .img-wrapper { position: relative; width: 100%; background: #070d1a; border-bottom: 1px solid var(--border); overflow: hidden; }
-  .img-wrapper img { width: 100%; display: block; max-height: 420px; object-fit: cover; transition: transform 0.4s ease; }
-  .img-wrapper:hover img { transform: scale(1.02); }
-  .img-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 60%, var(--surface) 100%); pointer-events: none; }
+    .img-wrapper { position: relative; width: 100%; background: #070d1a; border-bottom: 1px solid var(--border); overflow: hidden; }
+    .img-wrapper img { width: 100%; display: block; max-height: 420px; object-fit: cover; transition: transform 0.4s ease; }
+    .img-wrapper:hover img { transform: scale(1.02); }
+    .img-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 60%, var(--surface) 100%); pointer-events: none; }
 
-  .featured-body { padding: 28px 32px 32px; }
-  .featured-body h3 { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
-  .featured-body .desc { color: var(--muted); margin-bottom: 24px; font-size: 15px; }
+    .featured-body { padding: 28px 32px 32px; }
+    .featured-body h3 { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+    .featured-body .desc { color: var(--muted); margin-bottom: 24px; font-size: 15px; }
 
-  .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin-bottom: 24px; }
-  .metric { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; }
-  .metric-icon { font-size: 22px; margin-bottom: 6px; }
-  .metric-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
-  .metric-val { font-size: 13px; font-weight: 600; color: var(--accent); margin-top: 3px; }
+    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin-bottom: 24px; }
+    .metric { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; }
+    .metric-icon { font-size: 22px; margin-bottom: 6px; }
+    .metric-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .metric-val { font-size: 13px; font-weight: 600; color: var(--accent); margin-top: 3px; }
 
-  .tools-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
-  .tool-tag { background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.2); color: var(--accent); padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 500; }
+    .tools-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+    .tool-tag { background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.2); color: var(--accent); padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 500; }
 
-  .diff-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  .diff-item { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
-  .diff-item::before { content: '✦'; color: var(--accent2); font-size: 10px; flex-shrink: 0; }
+    .diff-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .diff-item { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+    .diff-item::before { content: '✦'; color: var(--accent2); font-size: 10px; flex-shrink: 0; }
 
-  .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 26px; transition: all 0.25s; }
-  .card:hover { transform: translateY(-4px); border-color: rgba(56,189,248,0.3); }
-  .card-icon { font-size: 28px; margin-bottom: 14px; }
-  .card h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
-  .card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 26px; transition: all 0.25s; }
+    .card:hover { transform: translateY(-4px); border-color: rgba(56,189,248,0.3); }
+    .card-icon { font-size: 28px; margin-bottom: 14px; }
+    .card h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
+    .card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
-  .stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-  .stack-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; display: flex; align-items: center; gap: 14px; transition: all 0.25s; }
-  .stack-item:hover { border-color: rgba(56,189,248,0.3); background: var(--surface2); }
-  .stack-icon { font-size: 26px; flex-shrink: 0; }
-  .stack-info .stack-name { font-weight: 600; font-size: 15px; }
-  .stack-info .stack-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .stack-item { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; display: flex; align-items: center; gap: 14px; transition: all 0.25s; }
+    .stack-item:hover { border-color: rgba(56,189,248,0.3); background: var(--surface2); }
+    .stack-icon { font-size: 26px; flex-shrink: 0; }
+    .stack-info .stack-name { font-weight: 600; font-size: 15px; }
+    .stack-info .stack-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
 
-  /* SCRIPTS */
-  .lang-tabs { display: flex; gap: 10px; margin-bottom: 28px; }
-  .tab { padding: 8px 20px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--muted); font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
-  .tab.active, .tab:hover { background: rgba(56,189,248,0.12); border-color: var(--accent); color: var(--accent); }
-  .scripts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-  .script-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 12px; transition: all 0.25s; }
-  .script-card:hover { transform: translateY(-4px); border-color: rgba(56,189,248,0.3); }
-  .script-card.hidden { display: none; }
-  .script-header { display: flex; align-items: center; justify-content: space-between; }
-  .lang-badge { padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
-  .lang-badge.python { background: rgba(56,189,248,0.12); border: 1px solid rgba(56,189,248,0.3); color: var(--accent); }
-  .lang-badge.r { background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.3); color: var(--accent2); }
-  .script-type { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
-  .script-card h3 { font-size: 16px; font-weight: 600; margin: 0; }
-  .script-card p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; flex-grow: 1; }
-  .script-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .script-tags span { background: var(--surface2); border: 1px solid var(--border); color: var(--muted); padding: 3px 10px; border-radius: 5px; font-size: 12px; }
-  .script-link { display: inline-block; margin-top: 4px; color: var(--accent); font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
-  .script-link:hover { color: #7dd3fc; }
+    /* SCRIPTS */
+    .lang-tabs { display: flex; gap: 10px; margin-bottom: 28px; }
+    .tab { padding: 8px 20px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--muted); font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
+    .tab.active, .tab:hover { background: rgba(56,189,248,0.12); border-color: var(--accent); color: var(--accent); }
+    .scripts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .script-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 12px; transition: all 0.25s; }
+    .script-card:hover { transform: translateY(-4px); border-color: rgba(56,189,248,0.3); }
+    .script-card.hidden { display: none; }
+    .script-header { display: flex; align-items: center; justify-content: space-between; }
+    .lang-badge { padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+    .lang-badge.python { background: rgba(56,189,248,0.12); border: 1px solid rgba(56,189,248,0.3); color: var(--accent); }
+    .lang-badge.r { background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.3); color: var(--accent2); }
+    .script-type { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .script-card h3 { font-size: 16px; font-weight: 600; margin: 0; }
+    .script-card p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; flex-grow: 1; }
+    .script-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .script-tags span { background: var(--surface2); border: 1px solid var(--border); color: var(--muted); padding: 3px 10px; border-radius: 5px; font-size: 12px; }
+    .script-link { display: inline-block; margin-top: 4px; color: var(--accent); font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+    .script-link:hover { color: #7dd3fc; }
 
-  .contact-box { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 36px; text-align: center; }
-  .contact-box p { color: var(--muted); margin-bottom: 24px; font-size: 16px; }
-  .contact-links { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
-  .contact-link { display: flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
-  .contact-link.linkedin { background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.3); color: var(--accent); }
-  .contact-link.email { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3); color: var(--accent2); }
-  .contact-link:hover { transform: translateY(-2px); }
+    .contact-box { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 36px; text-align: center; }
+    .contact-box p { color: var(--muted); margin-bottom: 24px; font-size: 16px; }
+    .contact-links { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .contact-link { display: flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+    .contact-link.linkedin { background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.3); color: var(--accent); }
+    .contact-link.email { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3); color: var(--accent2); }
+    .contact-link:hover { transform: translateY(-2px); }
 
-  footer { text-align: center; padding: 30px; background: var(--surface); color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); }
+    footer { text-align: center; padding: 30px; background: var(--surface); color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); }
 
-  @media (max-width: 600px) {
-    header h1 { font-size: 30px; }
-    .diff-list { grid-template-columns: 1fr; }
-    .featured-body { padding: 20px; }
-  }
-</style>
+    @media (max-width: 600px) {
+      header h1 { font-size: 30px; }
+      .diff-list { grid-template-columns: 1fr; }
+      .featured-body { padding: 20px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -177,7 +215,7 @@
       <h3>🌳 Dashboard de Inventário Florestal</h3>
       <p class="desc">
         Dashboard estratégico em Power BI para análise de dados de inventário florestal,
-        com acompanhamento de volume, idade E IMA em tempo real.
+        com acompanhamento de volume, idade e IMA em tempo real.
       </p>
       <div class="metrics-grid">
         <div class="metric"><div class="metric-icon">🌲</div><div class="metric-label">Análise</div><div class="metric-val">Volume atual e futuro</div></div>
@@ -197,8 +235,6 @@
         <div class="diff-item">Filtros dinâmicos por ano de inventário</div>
         <div class="diff-item">Integração com base cadastral</div>
         <div class="diff-item">Otimização de performance do modelo</div>
-        <div class="diff-item">Distribuição por regional</div>
-        <div class="diff-item">Tratamento e padronização de base</div>
       </div>
     </div>
   </div>
@@ -248,7 +284,7 @@
   <div class="lang-tabs">
     <button class="tab active" onclick="filterScripts('all', this)">Todos</button>
     <button class="tab" onclick="filterScripts('python', this)">🐍 Python</button>
-    <button class="tab" onclick="filterScripts('r', this)">📈 R Studio / R Studio</button>
+    <button class="tab" onclick="filterScripts('r', this)">📈 R Studio</button>
   </div>
   <div class="scripts-grid">
 
@@ -268,33 +304,32 @@
     <div class="script-card" data-lang="python">
       <div class="script-header">
         <span class="lang-badge python">🐍 Python</span>
+        <span class="script-type">ETL · Qualidade · Dashboard</span>
+      </div>
+      <h3>Processamento de Qualidade de Avaliações de Viveiro Florestal</h3>
+      <p>Lê base e aplica regras de negócio para calcular índices de não conformidade (altura, oídio, paliteiro, limpeza, poda drástica) por minijardim, determina conformidade geral por limites operacionais e exporta Excel pronto para alimentar dashboard de qualidade florestal.</p>
+      <div class="script-tags">
+        <span>Pandas</span><span>ETL</span><span>Regras de Negócio</span><span>KPIs</span><span>Dashboard-ready</span>
+      </div>
+      <a href="https://github.com/diane-ruthes/dianeruthes.github.io" class="script-link" target="_blank">Ver no GitHub →</a>
+    </div>
+
+    <div class="script-card" data-lang="python">
+      <div class="script-header">
+        <span class="lang-badge python">🐍 Python</span>
         <span class="script-type">Análise · Relatórios</span>
       </div>
-      
-<div class="script-card" data-lang="python">
-  <div class="script-header">
-    <span class="lang-badge python">🐍 Python</span>
-    <span class="script-type">ETL · Qualidade · Dashboard</span>
-  </div>
-  <h3>Processamento de qualidade de avaliações de viveiro florestal </h3>
-  <p>Lê base Aplica regras de negócio para calcular índices de não conformidade (altura, oídio, paliteiro, limpeza, poda drástica) por minijardim, determina conformidade geral por limites operacionais e exporta Excel pronto para alimentar dashboard de qualidade florestal.</p>
-  <div class="script-tags">
-    <span>Pandas</span><span>ETL</span><span>Regras de Negócio</span><span>KPIs</span><span>Dashboard-ready</span>
-  </div>
-  <a href="https://github.com/SEU_USUARIO/SEU_REPO" class="script-link" target="_blank">Ver no GitHub →</a>
-</div>
-      
-      <h3> Aderencia de cubagem e Analise de DAP vrs Altura </h3>
+      <h3>Aderência de Cubagem e Análise de DAP vs Altura</h3>
       <p>Gera automaticamente abas Excel com distribuição de indivíduos por classe de DAP e altura, incluindo contagem absoluta, percentual por talhão, por fazenda e clone.</p>
       <div class="script-tags">
         <span>Pandas</span><span>NumPy</span><span>openpyxl</span><span>Cubagem</span><span>Score Visual</span>
       </div>
-      <a href="https://github.com/diane-ruthes/dianeruthes.github.io"" class="script-link" target="_blank">Ver no GitHub →</a>
+      <a href="https://github.com/diane-ruthes/dianeruthes.github.io" class="script-link" target="_blank">Ver no GitHub →</a>
     </div>
 
     <div class="script-card" data-lang="r">
       <div class="script-header">
-        <span class="lang-badge r">📈 R Studio </span>
+        <span class="lang-badge r">📈 R Studio</span>
         <span class="script-type">Fitossociologia · Análise Estatística</span>
       </div>
       <h3>Análise Fitossociológica de Vegetação Nativa</h3>
@@ -302,33 +337,33 @@
       <div class="script-tags">
         <span>tidyverse</span><span>ggplot2</span><span>dplyr</span><span>gridExtra</span><span>writexl</span>
       </div>
-      <a href="https://github.com/diane-ruthes/dianeruthes.github.io"" class="script-link" target="_blank">Ver no GitHub →</a>
+      <a href="https://github.com/diane-ruthes/dianeruthes.github.io" class="script-link" target="_blank">Ver no GitHub →</a>
     </div>
 
     <div class="script-card" data-lang="r">
       <div class="script-header">
-        <span class="lang-badge r">📈 R Studio </span>
+        <span class="lang-badge r">📈 R Studio</span>
         <span class="script-type">IFC · Análise Exploratória</span>
       </div>
-      <h3>Análise IFC — Relação DAP vrs Altura</h3>
-      <p>Integra base do inventário contínuo (IFC) com dados cadastrais SGF e cubagem, filtra registros e gera gráficos de dispersão DAP vrs Altura — segmentados por clone e zona climática — para validar a aderência das parcelas à cubagem.</p>
+      <h3>Análise IFC — Relação DAP vs Altura</h3>
+      <p>Integra base do inventário contínuo (IFC) com dados cadastrais SGF e cubagem, filtra registros e gera gráficos de dispersão DAP vs Altura — segmentados por clone e zona climática — para validar a aderência das parcelas à cubagem.</p>
       <div class="script-tags">
         <span>ggplot2</span><span>dplyr</span><span>readxl</span><span>ggthemes</span><span>janitor</span><span>writexl</span>
       </div>
-      <a href="https://github.com/diane-ruthes/dianeruthes.github.io"" class="script-link" target="_blank">Ver no GitHub →</a>
+      <a href="https://github.com/diane-ruthes/dianeruthes.github.io" class="script-link" target="_blank">Ver no GitHub →</a>
     </div>
 
     <div class="script-card" data-lang="r">
       <div class="script-header">
-        <span class="lang-badge r">📈 R Studio </span>
+        <span class="lang-badge r">📈 R Studio</span>
         <span class="script-type">Cubagem · Seleção Estatística</span>
       </div>
       <h3>Seleção de Árvores para Cubagem</h3>
-      <p>Filtra árvores candidatas à cubagem por sobreposição real em grade DAP vrs Altura, comparando a base com o banco de cubagem existente. Gera gráficos de aderência e exporta a cubagem selecionada em Excel.</p>
+      <p>Filtra árvores candidatas à cubagem por sobreposição real em grade DAP vs Altura, comparando a base com o banco de cubagem existente. Gera gráficos de aderência e exporta a cubagem selecionada em Excel.</p>
       <div class="script-tags">
         <span>ggplot2</span><span>dplyr</span><span>readxl</span><span>writexl</span><span>Amostragem Espacial</span>
       </div>
-      <a href="https://github.com/diane-ruthes/dianeruthes.github.io"" class="script-link" target="_blank">Ver no GitHub →</a>
+      <a href="https://github.com/diane-ruthes/dianeruthes.github.io" class="script-link" target="_blank">Ver no GitHub →</a>
     </div>
 
   </div>
