@@ -160,7 +160,7 @@
     Profissional de dados especializada em <strong>automação de processos</strong>, tratamento e modelagem de dados,
     com forte atuação em <strong>Python, Power BI</strong> e integração de sistemas.
     Experiência no desenvolvimento de soluções que <strong>reduzem tempo operacional</strong> e aumentam eficiência analítica,
-    com background em dados ambientais e florestais.
+    com background em dados florestais e ambientais.
   </div>
 </section>
 
@@ -177,14 +177,13 @@
       <h3>🌳 Dashboard de Inventário Florestal</h3>
       <p class="desc">
         Dashboard estratégico em Power BI para análise de dados de inventário florestal,
-        com acompanhamento de volume, idade, área e indicadores operacionais em tempo real.
+        com acompanhamento de volume, idade E IMA em tempo real.
       </p>
       <div class="metrics-grid">
-        <div class="metric"><div class="metric-icon">📐</div><div class="metric-label">Indicador</div><div class="metric-val">Vol / Hectare</div></div>
-        <div class="metric"><div class="metric-icon">🌲</div><div class="metric-label">Análise</div><div class="metric-val">Área por Ciclo</div></div>
+        <div class="metric"><div class="metric-icon">🌲</div><div class="metric-label">Análise</div><div class="metric-val">Volume atual e futuro</div></div>
         <div class="metric"><div class="metric-icon">📅</div><div class="metric-label">Métrica</div><div class="metric-val">Idade Média</div></div>
         <div class="metric"><div class="metric-icon">📍</div><div class="metric-label">Escopo</div><div class="metric-val">Por Regional</div></div>
-        <div class="metric"><div class="metric-icon">📊</div><div class="metric-label">Índice</div><div class="metric-val">% IFC</div></div>
+        <div class="metric"><div class="metric-icon">📊</div><div class="metric-label">Índice</div><div class="metric-val">IMA</div></div>
       </div>
       <div class="tools-row">
         <span class="tool-tag">Power BI</span>
@@ -208,7 +207,7 @@
     <div class="card">
       <div class="card-icon">🤖</div>
       <h3>Automação de Processamento de Dados</h3>
-      <p>Scripts Python para tratamento automático de planilhas, integração com ArcGIS e geração de relatórios estruturados.</p>
+      <p>Scripts Python para tratamento automático de planilhas, integração com sistemas e geração de relatórios estruturados.</p>
     </div>
     <div class="card">
       <div class="card-icon">🌿</div>
@@ -238,10 +237,6 @@
       <div class="stack-info"><div class="stack-name">SQL</div><div class="stack-desc">Consultas · Banco de dados</div></div>
     </div>
     <div class="stack-item">
-      <div class="stack-icon">🗺️</div>
-      <div class="stack-info"><div class="stack-name">ArcGIS</div><div class="stack-desc">Dados geoespaciais</div></div>
-    </div>
-    <div class="stack-item">
       <div class="stack-icon">🐙</div>
       <div class="stack-info"><div class="stack-name">Git & GitHub</div><div class="stack-desc">Versionamento · Portfolio</div></div>
     </div>
@@ -253,7 +248,7 @@
   <div class="lang-tabs">
     <button class="tab active" onclick="filterScripts('all', this)">Todos</button>
     <button class="tab" onclick="filterScripts('python', this)">🐍 Python</button>
-    <button class="tab" onclick="filterScripts('r', this)">📈 R / RStudio</button>
+    <button class="tab" onclick="filterScripts('r', this)">📈 R Studio / R Studio</button>
   </div>
   <div class="scripts-grid">
 
@@ -263,7 +258,7 @@
         <span class="script-type">ETL · Automação</span>
       </div>
       <h3>Processamento de Inventário Florestal</h3>
-      <p>Pipeline completo para consolidar arquivos INV*.txt, enriquecer com dados cadastrais via PROCV, classificar parcelas em IFC / IFQ12 / IFQ6 e gerar relatórios Excel com validação automática de DAP duplicado e análise de altura por parcela.</p>
+      <p>Pipeline completo para consolidar arquivos txt, classificar parcelas em IFC / IFQ12 / IFQ6 e gerar relatórios Excel com validação automática de DAP duplicado e análise de altura por parcela.</p>
       <div class="script-tags">
         <span>Pandas</span><span>openpyxl</span><span>ETL</span><span>Automação</span><span>Validação</span>
       </div>
@@ -281,16 +276,16 @@
     <span class="lang-badge python">🐍 Python</span>
     <span class="script-type">ETL · Qualidade · Dashboard</span>
   </div>
-  <h3>Processamento de Qualidade de Minijardim Clonal</h3>
-  <p>Lê base Survey de viveiro, aplica regras de negócio para calcular índices de não conformidade (altura, oídio, paliteiro, limpeza, poda drástica) por minijardim, determina conformidade geral por limites operacionais e exporta Excel pronto para alimentar dashboard de qualidade florestal.</p>
+  <h3>Processamento de qualidade de avaliações de viveiro florestal </h3>
+  <p>Lê base Aplica regras de negócio para calcular índices de não conformidade (altura, oídio, paliteiro, limpeza, poda drástica) por minijardim, determina conformidade geral por limites operacionais e exporta Excel pronto para alimentar dashboard de qualidade florestal.</p>
   <div class="script-tags">
     <span>Pandas</span><span>ETL</span><span>Regras de Negócio</span><span>KPIs</span><span>Dashboard-ready</span>
   </div>
   <a href="https://github.com/SEU_USUARIO/SEU_REPO" class="script-link" target="_blank">Ver no GitHub →</a>
 </div>
       
-      <h3>Tabela Dinâmica DAP × Altura para Cubagem</h3>
-      <p>Gera automaticamente 5 abas Excel com pivot de distribuição de indivíduos por classe de DAP e altura, incluindo contagem absoluta, percentual por talhão, score colorido 1–5 e conversão DAP → CAP por fazenda e clone.</p>
+      <h3> Aderencia de cubagem e Analise de DAP vrs Altura </h3>
+      <p>Gera automaticamente abas Excel com distribuição de indivíduos por classe de DAP e altura, incluindo contagem absoluta, percentual por talhão, por fazenda e clone.</p>
       <div class="script-tags">
         <span>Pandas</span><span>NumPy</span><span>openpyxl</span><span>Cubagem</span><span>Score Visual</span>
       </div>
@@ -299,7 +294,7 @@
 
     <div class="script-card" data-lang="r">
       <div class="script-header">
-        <span class="lang-badge r">📈 R</span>
+        <span class="lang-badge r">📈 R Studio </span>
         <span class="script-type">Fitossociologia · Análise Estatística</span>
       </div>
       <h3>Análise Fitossociológica de Vegetação Nativa</h3>
@@ -312,11 +307,11 @@
 
     <div class="script-card" data-lang="r">
       <div class="script-header">
-        <span class="lang-badge r">📈 R</span>
+        <span class="lang-badge r">📈 R Studio </span>
         <span class="script-type">IFC · Análise Exploratória</span>
       </div>
-      <h3>Análise IFC — Relação DAP × Altura</h3>
-      <p>Integra base do inventário contínuo (IFC) com dados cadastrais SGF e cubagem, filtra registros por código sanitário e gera gráficos de dispersão DAP × Altura com suavização LOESS — segmentados por clone e zona climática — para validar a aderência das parcelas à cubagem.</p>
+      <h3>Análise IFC — Relação DAP vrs Altura</h3>
+      <p>Integra base do inventário contínuo (IFC) com dados cadastrais SGF e cubagem, filtra registros e gera gráficos de dispersão DAP vrs Altura — segmentados por clone e zona climática — para validar a aderência das parcelas à cubagem.</p>
       <div class="script-tags">
         <span>ggplot2</span><span>dplyr</span><span>readxl</span><span>ggthemes</span><span>janitor</span><span>writexl</span>
       </div>
@@ -325,11 +320,11 @@
 
     <div class="script-card" data-lang="r">
       <div class="script-header">
-        <span class="lang-badge r">📈 R</span>
+        <span class="lang-badge r">📈 R Studio </span>
         <span class="script-type">Cubagem · Seleção Estatística</span>
       </div>
       <h3>Seleção de Árvores para Cubagem</h3>
-      <p>Filtra árvores candidatas à cubagem por sobreposição real em grade DAP × Altura (célula 1 cm × 1 m), comparando a base de campo UA_BETEL com o banco de cubagem existente. Gera 3 gráficos de aderência progressiva e exporta a cubagem selecionada em Excel.</p>
+      <p>Filtra árvores candidatas à cubagem por sobreposição real em grade DAP vrs Altura, comparando a base com o banco de cubagem existente. Gera gráficos de aderência e exporta a cubagem selecionada em Excel.</p>
       <div class="script-tags">
         <span>ggplot2</span><span>dplyr</span><span>readxl</span><span>writexl</span><span>Amostragem Espacial</span>
       </div>
