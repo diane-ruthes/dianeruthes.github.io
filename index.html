@@ -186,6 +186,50 @@
     border-top: 1px solid var(--border);
   }
 
+  /* SCRIPTS SECTION */
+  .lang-tabs { display: flex; gap: 10px; margin-bottom: 28px; }
+  .tab {
+    padding: 8px 20px; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--muted);
+    font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s;
+  }
+  .tab.active, .tab:hover {
+    background: rgba(56,189,248,0.12); border-color: var(--accent); color: var(--accent);
+  }
+  .scripts-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;
+  }
+  .script-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px;
+    display: flex; flex-direction: column; gap: 12px;
+    transition: all 0.25s;
+  }
+  .script-card:hover { transform: translateY(-4px); border-color: rgba(56,189,248,0.3); }
+  .script-card.hidden { display: none; }
+  .script-header { display: flex; align-items: center; justify-content: space-between; }
+  .lang-badge { padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  .lang-badge.python {
+    background: rgba(56,189,248,0.12); border: 1px solid rgba(56,189,248,0.3); color: var(--accent);
+  }
+  .lang-badge.r {
+    background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.3); color: var(--accent2);
+  }
+  .script-type { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .script-card h3 { font-size: 16px; font-weight: 600; margin: 0; }
+  .script-card p { font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0; flex-grow: 1; }
+  .script-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .script-tags span {
+    background: var(--surface2); border: 1px solid var(--border);
+    color: var(--muted); padding: 3px 10px; border-radius: 5px; font-size: 12px;
+  }
+  .script-link {
+    display: inline-block; margin-top: 4px;
+    color: var(--accent); font-size: 14px; font-weight: 600;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .script-link:hover { color: #7dd3fc; }
+
   @media (max-width: 600px) {
     header h1 { font-size: 30px; }
     .diff-list { grid-template-columns: 1fr; }
@@ -225,7 +269,6 @@
   <div class="featured-label">⭐ Projeto Principal</div>
   <div class="featured-card">
     <div class="video-wrapper">
-      <!-- Suba seu vídeo na pasta assets/ do repositório -->
       <video autoplay loop muted playsinline src="assets/dashboard-inventario-florestal.mp4">
         Seu navegador não suporta vídeo HTML5.
       </video>
@@ -338,6 +381,85 @@
 </section>
 
 <section>
+  <h2>🐍 Scripts & Automações</h2>
+
+  <div class="lang-tabs">
+    <button class="tab active" onclick="filterScripts('all', this)">Todos</button>
+    <button class="tab" onclick="filterScripts('python', this)">🐍 Python</button>
+    <button class="tab" onclick="filterScripts('r', this)">📈 R / RStudio</button>
+  </div>
+
+  <div class="scripts-grid">
+
+    <div class="script-card" data-lang="python">
+      <div class="script-header">
+        <span class="lang-badge python">🐍 Python</span>
+        <span class="script-type">ETL · Automação</span>
+      </div>
+      <h3>Processamento de Inventário Florestal</h3>
+      <p>Pipeline completo para consolidar arquivos INV*.txt, enriquecer com dados cadastrais via PROCV, classificar parcelas em IFC / IFQ12 / IFQ6 e gerar relatórios Excel com validação automática de DAP duplicado e análise de altura por parcela.</p>
+      <div class="script-tags">
+        <span>Pandas</span><span>openpyxl</span><span>ETL</span><span>Automação</span><span>Validação</span>
+      </div>
+      <a href="https://github.com/SEU_USUARIO/SEU_REPO" class="script-link" target="_blank">Ver no GitHub →</a>
+    </div>
+
+    <div class="script-card" data-lang="python">
+      <div class="script-header">
+        <span class="lang-badge python">🐍 Python</span>
+        <span class="script-type">Análise · Relatórios</span>
+      </div>
+      <h3>Tabela Dinâmica DAP × Altura para Cubagem</h3>
+      <p>Gera automaticamente 5 abas Excel com pivot de distribuição de indivíduos por classe de DAP e altura, incluindo contagem absoluta, percentual por talhão, score colorido 1–5 e conversão DAP → CAP por fazenda e clone.</p>
+      <div class="script-tags">
+        <span>Pandas</span><span>NumPy</span><span>openpyxl</span><span>Cubagem</span><span>Score Visual</span>
+      </div>
+      <a href="https://github.com/SEU_USUARIO/SEU_REPO" class="script-link" target="_blank">Ver no GitHub →</a>
+    </div>
+
+    <div class="script-card" data-lang="r">
+      <div class="script-header">
+        <span class="lang-badge r">📈 R</span>
+        <span class="script-type">Fitossociologia · Análise Estatística</span>
+      </div>
+      <h3>Análise Fitossociológica de Vegetação Nativa</h3>
+      <p>Calcula índices fitossociológicos completos (IVI, VC, Shannon-Wiener, Pielou) por espécie e parcela, gera distribuição diamétrica com curva J invertido (ggplot2) e exporta relatórios em Excel e PDF com classificação CONAMA por parcela.</p>
+      <div class="script-tags">
+        <span>tidyverse</span><span>ggplot2</span><span>dplyr</span><span>gridExtra</span><span>writexl</span>
+      </div>
+      <a href="https://github.com/SEU_USUARIO/SEU_REPO" class="script-link" target="_blank">Ver no GitHub →</a>
+    </div>
+
+    <div class="script-card" data-lang="r">
+      <div class="script-header">
+        <span class="lang-badge r">📈 R</span>
+        <span class="script-type">IFC · Análise Exploratória</span>
+      </div>
+      <h3>Análise IFC — Relação DAP × Altura</h3>
+      <p>Integra base do inventário contínuo (IFC) com dados cadastrais SGF e cubagem, filtra registros por código sanitário e gera gráficos de dispersão DAP × Altura com suavização LOESS — segmentados por clone e zona climática — para validar a aderência das parcelas à cubagem.</p>
+      <div class="script-tags">
+        <span>ggplot2</span><span>dplyr</span><span>readxl</span><span>ggthemes</span><span>janitor</span><span>writexl</span>
+      </div>
+      <a href="https://github.com/SEU_USUARIO/SEU_REPO" class="script-link" target="_blank">Ver no GitHub →</a>
+    </div>
+
+    <div class="script-card" data-lang="r">
+      <div class="script-header">
+        <span class="lang-badge r">📈 R</span>
+        <span class="script-type">Cubagem · Seleção Estatística</span>
+      </div>
+      <h3>Seleção de Árvores para Cubagem</h3>
+      <p>Filtra árvores candidatas à cubagem por sobreposição real em grade DAP × Altura (célula 1 cm × 1 m), comparando a base de campo UA_BETEL com o banco de cubagem existente. Gera 3 gráficos de aderência progressiva e exporta a cubagem selecionada em Excel.</p>
+      <div class="script-tags">
+        <span>ggplot2</span><span>dplyr</span><span>readxl</span><span>writexl</span><span>Amostragem Espacial</span>
+      </div>
+      <a href="https://github.com/SEU_USUARIO/SEU_REPO" class="script-link" target="_blank">Ver no GitHub →</a>
+    </div>
+
+  </div>
+</section>
+
+<section>
   <h2>📩 Contato</h2>
   <div class="contact-box">
     <p>Aberta a novas oportunidades e colaborações em projetos de dados, automação e BI.</p>
@@ -356,6 +478,16 @@
   © 2026 Diane Ruthes · Data & Automation Portfolio
 </footer>
 
+<script>
+  function filterScripts(lang, btn) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.script-card').forEach(card => {
+      const show = lang === 'all' || card.dataset.lang === lang;
+      card.classList.toggle('hidden', !show);
+    });
+  }
+</script>
+
 </body>
 </html>
-```
