@@ -96,15 +96,23 @@
   }
   .featured-card:hover { border-color: rgba(52,211,153,0.5); transform: translateY(-3px); }
 
-  .video-wrapper {
-    position: relative;
-    width: 100%; background: #070d1a;
-    border-bottom: 1px solid var(--border);
-  }
-  .video-wrapper video {
-    width: 100%; display: block;
-    max-height: 420px; object-fit: cover;
-  }
+  .img-wrapper {
+  position: relative;
+  width: 100%; background: #070d1a;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.img-wrapper img {
+  width: 100%; display: block;
+  max-height: 420px; object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.img-wrapper:hover img { transform: scale(1.02); }
+.img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, var(--surface) 100%);
+  pointer-events: none;
+}
   .video-overlay {
     position: absolute; inset: 0;
     background: linear-gradient(to bottom, transparent 60%, var(--surface) 100%);
@@ -247,7 +255,6 @@
     <span class="badge">🌿 Dados Florestais</span>
     <span class="badge">📊 Power BI</span>
     <span class="badge">🐍 Python</span>
-    <span class="badge">🗺️ ArcGIS</span>
     <span class="badge">⚙️ Automação</span>
   </div>
   <a href="https://www.linkedin.com/in/dianejanaineruthes/" class="btn" target="_blank">🔗 Meu LinkedIn</a>
@@ -268,12 +275,10 @@
 
   <div class="featured-label">⭐ Projeto Principal</div>
   <div class="featured-card">
-    <div class="video-wrapper">
-      <video autoplay loop muted playsinline src="assets/dashboard-inventario-florestal.mp4">
-        Seu navegador não suporta vídeo HTML5.
-      </video>
-      <div class="video-overlay"></div>
-    </div>
+    <div class="img-wrapper">
+  <img src="assets/PBI Inventario.jpg" alt="Dashboard de Inventário Florestal - Power BI">
+  <div class="img-overlay"></div>
+</div>
     <div class="featured-body">
       <h3>🌳 Dashboard de Inventário Florestal</h3>
       <p class="desc">
